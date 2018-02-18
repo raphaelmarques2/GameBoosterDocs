@@ -520,7 +520,7 @@ Fields:
   - `UnityEvent<float> onMinValue` : Event called when the timer reaches the min value
   - `UnityEvent<float> onMaxValue` : Event called when the timer reaches the max value
   - `int textDigits` : Digits to show at the OnChangeText event
-  - `UnityEvent<string> onChangeText` : Event called when the timer value changes, passing a string as parameter
+  - `UnityEvent<string> onChangeText` : Event called when the timer value changes, passing its conversion to string
 
 Methods:
 - `void AddTime(float time)` : Adds some time to currentTime
@@ -534,41 +534,66 @@ Methods:
 
 ![Image](images/IntVar.png)
 
-description
+Stores a global int variable.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string id` : variable identifier
+- `int value` : current value
+- `int startValue` : start variable value
+- `FilterType filter` : Filter to apply when value changes
+- `bool limitValue` : limit variable value
+  - `int minValue` : min value allowed
+  - `int maxValue` : max value allowed
+- `bool storeOnPlayerPrefs` : store this variable in PlayerPrefs
+  - `string playerPrefsKey` : PlayerPrefs key
+  - `bool autoLoadOnStart` : auto load variable from PlayerPrefs
+  - `bool autoSave` : auto save variable in PlayerPrefs
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Add(int inc)` : Adds this variable to some value (value += inc)
+- `void Multiply(int multiplier)` : Multiply this variable by some value (value *= multiplier)
+- `void Divide(int divider)` : Divide this variable by some value (value /= divider)
+- `void SetValue(int value)` : Change this variable value
+- `void ResetValue()` : Reset value to `startValue`
+- `void SaveOnPlayerPrefs()` : Save on PlayerPrefs
+- `void LoadFromPlayerPrefs()` : Load from PlayerPrefs
+
+`FilterType` enum values:
+- `None` : No filter
+- `KeepMinValue` : Keep minimum value when value changes
+- `KeepMaxValue` : keep maximum value when value changes
 
 ### IntVarRef
 
 ![Image](images/KeyInput.png)
 
-description
+Reference to a [IntVar](#intvar) component.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string varId` : Referenced `IntVar` identifier
+- `GlobalVariablePlace varPlace` : Referenced `IntVar` search place
+- `GlobalVarGetEvents<int> getValue` : Ways to get referenced `IntVar` value
+  - `bool condition` : submit the `getValue` to some condition
+    - `bool ignoreConditionOnStart` : ignore this condition on first value get
+    - `GlobalVarComparisonType comparison` : condition comparison
+    - `int comparisonValue` : condition comparison value
+  - `UnityEvent<int> onValueChange` : event called when the value changes
+  - `UnityEvent<string> onValueChangeText` : event called when the value changes passing its conversion to string
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Add(int inc)` : Adds the referenced variable to some value (value += inc)
+- `void Multiply(int multiplier)` : Multiply the referenced variable by some value (value *= multiplier)
+- `void Divide(int divider)` : Divide the referenced variable by some value (value /= divider)
+- `void SetValue(int value)` : Change the referenced variable value
+- `void ResetValue()` : Reset the referenced variable value to `startValue`
+- `void SaveOnPlayerPrefs()` : Save the referenced variable on PlayerPrefs
+- `void LoadFromPlayerPrefs()` : Load the referenced variable from PlayerPrefs
+
+`GlobalVariablePlace` enum values:
+- `Anywhere` : Find the `IntVar` anywhere in the scene
+- `Self` : Find the `IntVar` in its own `GameObject`
+- `Children` : Find the `IntVar` in this object's children
+- `Parent` : Find the `IntVar` in this object's parents
 
 ### FloatVar
 

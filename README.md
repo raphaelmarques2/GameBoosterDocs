@@ -10,6 +10,15 @@ The components> are splitted in several categories: Basics, Movement, Physics, C
   - [BehaviourEvents](#behaviourevents)
   - [Creator](#creator)
   - [Destroyer](#destroyer)
+  - [ObjectSelector](#objectselector)
+  - [SceneMethods](#scenemethods)
+  - [TransformMethods](#transformmethods)
+- [Input components](#input-components)
+  - [AxisInput](#axisinput)
+  - [KeyInput](#keyinput)
+  - [MousePositionInput](#mousepositioninput)
+- [Movement components](#movement-components)
+
 
 ## Basics components
 

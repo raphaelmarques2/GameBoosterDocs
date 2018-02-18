@@ -713,8 +713,8 @@ Fields:
   - `bool condition` : submit the `getValue` to some condition
     - `bool ignoreConditionOnStart` : ignore this condition on first value get
     - `GlobalVarComparisonType comparison` : condition comparison
-    - `int comparisonValue` : condition comparison value
-  - `UnityEvent<int> onValueChange` : event called when the value changes
+    - `bool comparisonValue` : condition comparison value
+  - `UnityEvent<bool> onValueChange` : event called when the value changes
   - `UnityEvent<string> onValueChangeText` : event called when the value changes passing its conversion to string
 
 Methods:
@@ -744,50 +744,49 @@ Methods:
 
 ### Score
 
-![Image](images/KeyInput.png)
+![Image](images/Score.png)
 
-description
+Stores player score and record.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string id` : Score id  to differentiate multiple scores
+- `int value` : Current score
+- `int recordValue` : Current score record
+- `bool saveScore` : If the score should be automatically saved
+  - `string valuePlayerPrefsKey` : Score PlayerPrefs's key
+- `bool saveRecord` : If the record should be automatically saved
+  - `string recordPlayerPrefsKey` : Score PlayerPrefs's key
+- `ScoreEvents events` : Events relative to score and record
+  - `UnityEvent<int> onScoreChange` : Event called when score changes
+  - `UnityEvent<int> onRecordChange` : Event called when record changes
+  - `UnityEvent<int> onNewRecord` : Event called when score makes a new record
+  - `UnityEvent<string> onScoreChangeText` : Event called when score changes passing its conversion to string
+  - `UnityEvent<string> onRecordChangeText` : Event called when record changes passing its conversion to string
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void IncScore()` : Adds 1 to score
+- `void AddScore(int scoreChange)` : Add some value to score
+- `void ResetScore()` : Reset score value do 0(zero).
 
 ### ScoreMaker
 
-![Image](images/KeyInput.png)
+![Image](images/ScoreMaker.png)
 
-description
+Adds score to [Score](#score) component.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string scoreId` : Score component id
+- `int scoreChange` : Amount of score to be added
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-
+- `void ApplyScore()` : add `scoreChange` value to referenced score
+- `void AddScore(int scoreChange)` : add some value passed as parameter to referenced score
 
 ## Mechanics components
 
 ### MoveFourDirections2D
 
-![Image](images/KeyInput.png)
+![Image](images/MoveFourDirections2D.png)
 
 description
 
@@ -807,7 +806,7 @@ Methods:
 
 ### Platform2D
 
-![Image](images/KeyInput.png)
+![Image](images/Platform2D.png)
 
 description
 
@@ -827,7 +826,7 @@ Methods:
 
 ### Tank2D
 
-![Image](images/KeyInput.png)
+![Image](images/Tank2D.png)
 
 description
 
@@ -849,7 +848,7 @@ Methods:
 
 ### AudioManager
 
-![Image](images/KeyInput.png)
+![Image](images/AudioManager.png)
 
 description
 
@@ -869,7 +868,7 @@ Methods:
 
 ### AudioManagerControl
 
-![Image](images/KeyInput.png)
+![Image](images/AudioManagerControl.png)
 
 description
 

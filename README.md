@@ -229,7 +229,7 @@ Methods:
 
 ### FollowScreenPosition2D
 
-![Image](images/KeyInput.png)
+![Image](images/FollowScreenPosition2D.png)
 
 Follows a position relative to screen.
 
@@ -249,87 +249,84 @@ Methods:
 
 ### FollowTarget2D
 
-![Image](images/KeyInput.png)
+![Image](images/FollowTarget2D.png)
 
-description
+Follows a target position.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `Transform target` : Target that will be followed
+- `Vector2 offset` : Position offset from target
+- `float speed` : Speed at which the object will move to target. Set 0(zero) to infinity speed.
+- `Axis axis` : Axis affected by target position
 
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+`Axis` enum values:
+- `XY` : affects x and y axis
+- `X` : affects x axis
+- `Y` : affects y axis
 
 ### FollowTarget3D
 
-![Image](images/KeyInput.png)
+![Image](images/FollowTarget3D.png)
 
-description
+Follow a target position.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `Transform target` : Target that will be followed
+- `Vector3 offset` : Position offset from target
+- `float speed` : Speed at which the object will move to target. Set 0(zero) to infinity speed.
+- `Axis axis` : Axis affected by target position
 
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+`Axis` enum values :
+- `XYZ` : affects x, y and x axis
+- `XY` : affects x and y axis
+- `XZ` : affects x and z axis
+- `YZ` : affects y and z axis
+- `X` : affects x axis
+- `Y` : affects y axis
+- `Z` : affects z axis
 
 ### LookToTarget2D
 
-![Image](images/KeyInput.png)
+![Image](images/LookToTarget2D.png)
 
-description
+Makes the object look (rotate) to some target.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `Transform target` : Target the object will look to.
+- `float speed` : Angular speed at which the object will rotate. Set 0(zero) to infinity speed.
+- `float angleOffset` : Angle offset to fix object rotation
 
 ### Velocity2D
 
-![Image](images/KeyInput.png)
+![Image](images/Velocity2D.png)
 
-description
+Controls Rigidbody2D/Transform velocity.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `Vector2 velocity` : Current velocity
+- `float velocityX` : Current x velocity
+- `float velocityY` : Current y velocity
+- `bool local` : Use object local orientation
+- `ControlType controlType` : How the velocity is controlled
+- `Axis axis` : Axis affected
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void ApplyVelocity()` : Applies current velocity
+
+`ControlType` enum values:
+- `Continous` : Apply velocity every frame
+- `OnStart` : Apply velocity on `Start` event
+- `OnEnable` : Apply velocity on `OnEnable` event
+- `Manual` : Apply velocity when the method `ApplyVelocity()` is called
+
+`Axis` enum values:
+- `XY` : affects x and y axis
+- `X` : affects x axis
+- `Y` : affects y axis
 
 ### Velocity3D
 
-![Image](images/KeyInput.png)
+![Image](images/Velocity3D.png)
 
 description
 
@@ -352,7 +349,7 @@ Methods:
 
 ### Ridigbody2DMethods
 
-![Image](images/KeyInput.png)
+![Image](images/Ridigbody2DMethods.png)
 
 description
 
@@ -372,7 +369,7 @@ Methods:
 
 ### RidigbodyMethods
 
-![Image](images/KeyInput.png)
+![Image](images/RidigbodyMethods.png)
 
 description
 
@@ -392,7 +389,7 @@ Methods:
 
 ### SpeedLimit2D
 
-![Image](images/KeyInput.png)
+![Image](images/SpeedLimit2D.png)
 
 description
 
@@ -412,7 +409,7 @@ Methods:
 
 ### SpeedLimit3D
 
-![Image](images/KeyInput.png)
+![Image](images/SpeedLimit3D.png)
 
 description
 
@@ -435,7 +432,7 @@ Methods:
 
 ### CollisionDetector2D
 
-![Image](images/KeyInput.png)
+![Image](images/CollisionDetector2D.png)
 
 description
 
@@ -455,7 +452,7 @@ Methods:
 
 ### CollisionDetector3D
 
-![Image](images/KeyInput.png)
+![Image](images/CollisionDetector3D.png)
 
 description
 
@@ -478,7 +475,7 @@ Methods:
 
 ### TimedActions
 
-![Image](images/KeyInput.png)
+![Image](images/TimedActions.png)
 
 description
 
@@ -498,7 +495,7 @@ Methods:
 
 ### TimedActionSequence
 
-![Image](images/KeyInput.png)
+![Image](images/TimedActionSequence.png)
 
 description
 
@@ -518,7 +515,7 @@ Methods:
 
 ### Timer
 
-![Image](images/KeyInput.png)
+![Image](images/Timer.png)
 
 description
 
@@ -541,7 +538,7 @@ Methods:
 
 ### IntVar
 
-![Image](images/KeyInput.png)
+![Image](images/IntVar.png)
 
 description
 

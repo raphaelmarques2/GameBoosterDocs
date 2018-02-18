@@ -17,8 +17,8 @@ Basics components deal with fundamental logic in Game Booster
 Creates events for each MonoBehaviour events like Awake, Start, Update, OnEnable, etc. This component helps you to put simple logic in some MonoBehaviour event without creating a new script to it.
 
 Fields:
-- Enum eventType : Enum of each event will be received
-- UnityEvent actions : Events that will be called when the event set in EventType happens
+- `Enum eventType` : Enum of each event will be received
+- `UnityEvent actions` : Events that will be called when the event set in EventType happens
 
 ### Creator
 
@@ -27,18 +27,18 @@ Fields:
 Creates instance of prefabs. Randomically choose one prefab from the list to be instantiated at some spawn point.
 
 Fields:
-- List<GameObject> **prefabs** : Prefabs to be instantiated (random choosen).
-- bool **useRotation** : Use spawn point rotation as rotation of the instantiated object
-- bool **insideHierarchy** : Place the instantiated object inside other object's hierarchy
-  - Transform **parent** : Object to put the instantiated objects
-- bool **useSpawnPoints** : Use other spawn points instead of this object
-  - List<Transform> **spawnPoints**: Spawn points where the prefab will be instantiated (random choosen)
-- bool **autoCreate** : Automatically instantiate
-  - float **startTime** : Time to start prefab instantiation
-  - float **repeatTime** : Time between instantiations
+- `List<GameObject> prefabs` : Prefabs to be instantiated (random choosen).
+- `bool useRotation` : Use spawn point rotation as rotation of the instantiated object
+- `bool insideHierarchy` : Place the instantiated object inside other object's hierarchy
+  - `Transform parent` : Object to put the instantiated objects
+- `bool useSpawnPoints` : Use other spawn points instead of this object
+  - `List<Transform> spawnPoints`: Spawn points where the prefab will be instantiated (random choosen)
+- `bool autoCreate` : Automatically instantiate
+  - `float startTime` : Time to start prefab instantiation
+  - `float repeatTime` : Time between instantiations
 
 Methods:
-- void **Create()** : Instantiate a prefab using the options set
+- `void Create()` : Instantiate a prefab using the options set
 
 ### Destroyer
 
@@ -170,7 +170,6 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes

@@ -12,6 +12,8 @@ Basics components deal with fundamental logic in Game Booster
 
 ### BehaviourEvents
 
+![Image](images/BehaviourEvents.png)
+
 Creates events for each MonoBehaviour events like Awake, Start, Update, OnEnable, etc. This component helps you to put simple logic in some MonoBehaviour event without creating a new script to it.
 
 Fields:
@@ -19,6 +21,8 @@ Fields:
 - UnityEvent actions : Events that will be called when the event set in EventType happens
 
 ### Creator
+
+![Image](images/Creator.png)
 
 Creates instance of prefabs. Randomically choose one prefab from the list to be instantiated at some spawn point.
 
@@ -38,17 +42,25 @@ Methods:
 
 ### Destroyer
 
+![Image](images/Destroyer.png)
+
 This component has a few ways to destroy the object it is attached to. You can set a self-destruction time and a time to wait before destroy the object. An explosion prefab can be set to be instantiated when the object is destroied.
 
 ### ObjectSelector
+
+![Image](images/ObjectSelector.png)
 
 Selects one object of a list, activating it, and deactivating the others of the list. Can be used to switch between weapons, costumes, screens, etc. There are methods to select one of the objects and to advance to next or previous object in the list.
 
 ### SceneMethods
 
+![Image](images/SceneMethods.png)
+
 Gives access to static methods relative to the scene, like load another scene, or reload the current one, quit application, and control timeScale to pause the game. This component don’t add features, just gives access point to static methods and properties to be called via events by other components.
 
 ### TransformMethods
+
+![Image](images/TransformMethods.png)
 
 Allows set individual axis of its transform position, scale and angle. Can, also, copy transform properties from another transform.
 

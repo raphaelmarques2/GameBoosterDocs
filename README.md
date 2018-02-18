@@ -31,8 +31,8 @@ Basics components deal with fundamental logic in Game Booster
 Creates events for each MonoBehaviour events like Awake, Start, Update, OnEnable, etc. This component helps you to put simple logic in some MonoBehaviour event without creating a new script to it.
 
 Fields:
-- **Enum eventType** : Enum of each event will be received
-- **UnityEvent actions** : Events that will be called when the event set in EventType happens
+- `Enum eventType` : Enum of each event will be received
+- `UnityEvent actions` : Events that will be called when the event set in EventType happens
 
 ### Creator
 
@@ -41,37 +41,20 @@ Fields:
 Creates instance of prefabs. Randomically choose one prefab from the list to be instantiated at some spawn point.
 
 Fields:
-- **List\<GameObject\> prefabs** : Prefabs to be instantiated (random choosen).
-- **bool useRotation** : Use spawn point rotation as rotation of the instantiated object
-- **bool insideHierarchy** : Place the instantiated object inside other object's hierarchy
-  - **Transform parent** : Object to put the instantiated objects
-- **bool useSpawnPoints** : Use other spawn points instead of this object
-  - **List\<Transform\> spawnPoints** : Spawn points where the prefab will be instantiated (random choosen)
-- **bool autoCreate** : Automatically instantiate
-  - **float startTime** : Time to start prefab instantiation
-  - **float repeatTime** : Time between instantiations
+- `List<GameObject> prefabs` : Prefabs to be instantiated (random choosen).
+- `bool useRotation` : Use spawn point rotation as rotation of the instantiated object
+- `bool insideHierarchy` : Place the instantiated object inside other object's hierarchy
+  - `Transform parent` : Object to put the instantiated objects
+- `bool useSpawnPoints` : Use other spawn points instead of this object
+  - `List<Transform> spawnPoints` : Spawn points where the prefab will be instantiated (random choosen)
+- `bool autoCreate` : Automatically instantiate
+  - `float startTime` : Time to start prefab instantiation
+  - `float repeatTime` : Time between instantiations
 
 Methods:
-- **void Create()** : Instantiate a prefab using the options set
+- `void Create()` : Instantiate a prefab using the options set
 
 ### Destroyer
-
-![Image](images/Destroyer.png)
-
-This component has a few ways to destroy the object it is attached to.
-
-Fields:
-- **float selfDestructionTime** : Time to self destruction. Set 0(zero) to disable.
-- **float timeToDestroy** : Time to destroy when 'DestroyThis' method is called
-- **GameObject explosionPrefab** : Prefab to replace the destroyed object
-
-Methods:
-- **void DestroyThis()** : destroy this object including all options set
-- **void DestroyThisNow()** : destroy this object ignoring timeToDestroy option
-- **void DestroyThisWithoutExplosion()** : destroy this object ignoring explosion
-- **void JustDestroyThis()** : destroy this object ignoring all options
-
-### DestroyerX
 
 ![Image](images/Destroyer.png)
 
@@ -95,18 +78,18 @@ Methods:
 Selects one object of a list, activating it, and deactivating the others of the list. Can be used to switch between weapons, costumes, screens, etc.
 
 Fields:
-- **GameObject startSelected** : Selected object at start
-- **bool autoSelectOnEnable** : Select the 'startSelected' object on OnEnable event occours
-- **List\<GameObject\> objects** : Selectable objects
+- `GameObject startSelected` : Selected object at start
+- `bool autoSelectOnEnable` : Select the 'startSelected' object on OnEnable event occours
+- `List\<GameObject\> objects` : Selectable objects
 
 Methods:
-- **void SelectFirst()** : selects the first object of the list
-- **void SelectNext()** : selects the next object of the list, after the current selected
-- **void SelectPrevious()** : selects the previous object of the list, before the current selected
-- **void SelectNone()** : deselects all objects (deactivating all)
-- **void Select(GameObject obj)** : selects the object passed as parameter
-- **void Select(string name)** : selects the object of the list with the name passed as parameter
-- **void Select(int index)** : selects the object of the list at the position passed as parameter
+- `void SelectFirst()` : selects the first object of the list
+- `void SelectNext()` : selects the next object of the list, after the current selected
+- `void SelectPrevious()` : selects the previous object of the list, before the current selected
+- `void SelectNone()` : deselects all objects (deactivating all)
+- `void Select(GameObject obj)` : selects the object passed as parameter
+- `void Select(string name)` : selects the object of the list with the name passed as parameter
+- `void Select(int index)` : selects the object of the list at the position passed as parameter
 
 ### SceneMethods
 
@@ -115,11 +98,11 @@ Methods:
 Gives access to static methods relative to the scene. This component don’t add features, just gives access point to static methods and properties to be called via events by other components.
 
 Methods:
-- **void LoadScene(string sceneName)** : load another scene
-- **void ReloadCurrentScene()** : reload current scene
-- **void ApplicationQuit()** : quit application
-- **void Pause()** : set Time.timeScale = 0
-- **void Resume()** : set Time.timeScale = 1
+- `void LoadScene(string sceneName)` : load another scene
+- `void ReloadCurrentScene()` : reload current scene
+- `void ApplicationQuit()` : quit application
+- `void Pause()` : set Time.timeScale = 0
+- `void Resume()` : set Time.timeScale = 1
 
 ### TransformMethods
 
@@ -128,30 +111,30 @@ Methods:
 Methods and properties to set only one axis of position/scale/rotation and copy position/scale/rotation from other transform.
 
 Properties:
-- **float positionX** : set position.x value
-- **float positionY** : set position.y value
-- **float positionZ** : set position.z value
-- **float localPositionX** : set localPosition.x value
-- **float localPositionY** : set localPosition.y value
-- **float localPositionZ** : set localPosition.z value
-- **Vector2 positionXY** : set position.x and position.y values
-- **Vector2 localPositionXY** : set localPosition.x and localPosition.y values
-- **float localScaleX** : set localScale.x value
-- **float localScaleY** : set localScale.y value
-- **float localScaleZ** : set localScale.z value
-- **float eulerAnglesX** : set eulerAngles.x value
-- **float eulerAnglesY** : set eulerAngles.y value
-- **float eulerAnglesZ** : set eulerAngles.z value
-- **float localEulerAnglesX** : set localEulerAngles.x value
-- **float localEulerAnglesY** : set localEulerAngles.y value
-- **float localEulerAnglesZ** : set localEulerAngles.z value
+- `float positionX` : set position.x value
+- `float positionY` : set position.y value
+- `float positionZ` : set position.z value
+- `float localPositionX` : set localPosition.x value
+- `float localPositionY` : set localPosition.y value
+- `float localPositionZ` : set localPosition.z value
+- `Vector2 positionXY` : set position.x and position.y values
+- `Vector2 localPositionXY` : set localPosition.x and localPosition.y values
+- `float localScaleX` : set localScale.x value
+- `float localScaleY` : set localScale.y value
+- `float localScaleZ` : set localScale.z value
+- `float eulerAnglesX` : set eulerAngles.x value
+- `float eulerAnglesY` : set eulerAngles.y value
+- `float eulerAnglesZ` : set eulerAngles.z value
+- `float localEulerAnglesX` : set localEulerAngles.x value
+- `float localEulerAnglesY` : set localEulerAngles.y value
+- `float localEulerAnglesZ` : set localEulerAngles.z value
 
 Methods:
-- **void SetPositionFrom(Transform target)** : copy position from target transform
-- **void SetLocalPositionFrom(Transform target)** : copy localPosition from target transform
-- **void SetRotationFrom(Transform target)** : copy rotation from target transform
-- **void SetLocalRotationFrom(Transform target)** : copy localRotation from target transform
-- **void SetLocalScaleFrom(Transform target)** : copy localScale from target transform
+- `void SetPositionFrom(Transform target)` : copy position from target transform
+- `void SetLocalPositionFrom(Transform target)` : copy localPosition from target transform
+- `void SetRotationFrom(Transform target)` : copy rotation from target transform
+- `void SetLocalRotationFrom(Transform target)` : copy localRotation from target transform
+- `void SetLocalScaleFrom(Transform target)` : copy localScale from target transform
 
 ## Input components
 

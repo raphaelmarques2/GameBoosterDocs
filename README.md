@@ -103,7 +103,7 @@ Properties:
 - **float localPositionX** : set localPosition.x value
 - **float localPositionY** : set localPosition.y value
 - **float localPositionZ** : set localPosition.z value
-- **Vector2 *positionXY** : set position.x and position.y values
+- **Vector2 positionXY** : set position.x and position.y values
 - **Vector2 localPositionXY** : set localPosition.x and localPosition.y values
 - **float localScaleX** : set localScale.x value
 - **float localScaleY** : set localScale.y value

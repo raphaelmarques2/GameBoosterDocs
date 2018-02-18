@@ -328,22 +328,34 @@ Methods:
 
 ![Image](images/Velocity3D.png)
 
-description
+Controls Rigidbody3D/Transform velocity.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `Vector3 velocity` : Current velocity
+- `float velocityX` : Current x velocity
+- `float velocityY` : Current y velocity
+- `float velocityZ` : Current z velocity
+- `bool local` : Use object local orientation
+- `ControlType controlType` : How the velocity is controlled
+- `Axis axis` : Axis affected
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void ApplyVelocity()` : Applies current velocity
 
+`ControlType` enum values:
+- `Continous` : Apply velocity every frame
+- `OnStart` : Apply velocity on `Start` event
+- `OnEnable` : Apply velocity on `OnEnable` event
+- `Manual` : Apply velocity when the method `ApplyVelocity()` is called
+
+`Axis` enum values :
+- `XYZ` : affects x, y and x axis
+- `XY` : affects x and y axis
+- `XZ` : affects x and z axis
+- `YZ` : affects y and z axis
+- `X` : affects x axis
+- `Y` : affects y axis
+- `Z` : affects z axis
 
 ## Physics components
 

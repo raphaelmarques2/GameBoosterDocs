@@ -147,10 +147,10 @@ Components to get player's input.
 Gets axis input value.
 
 Fields:
-- ´string axisName´ : Axis name (ex: "Horizontal", "Vertical" )
-- ´bool raw´ : Get input raw value
-- ´float multiplier´ : Axis will be multiplied by this value
-- ´UnityEvent<float> actions´ : event called at each frame passing axis value
+- `string axisName` : Axis name (ex: "Horizontal", "Vertical" )
+- `bool raw` : Get input raw value
+- `float multiplier` : Axis will be multiplied by this value
+- `UnityEvent<float> actions` : event called at each frame passing axis value
 
 ### KeyInput
 
@@ -159,14 +159,14 @@ Fields:
 Gets key input events.
 
 Fields:
-- ´EventType eventType´ : Type of key event
-- ´KeyCode key´ : Key code
-- ´UnityEvent<bool> actions´ : event called when the key event happens
+- `EventType eventType` : Type of key event
+- `KeyCode key` : Key code
+- `UnityEvent<bool> actions` : event called when the key event happens
 
-EventType enum values:
-- Pressed : event is called when the key is pressed
-- Released : event is called when the key is released
-- Repeat : event is called each update
+`EventType` enum values:
+- `Pressed` : event is called when the key is pressed
+- `Released` : event is called when the key is released
+- `Repeat` : event is called each update
 
 ### MousePositionInput
 
@@ -175,14 +175,14 @@ EventType enum values:
 Gets mouse position.
 
 Fields:
-- ´PositionType positionType´ : Mouse position coordinate.
-- ´UnityEvent<Vector2> actions´ : events called each update passing the mouse position
+- `PositionType positionType` : Mouse position coordinate.
+- `UnityEvent<Vector2> actions` : events called each update passing the mouse position
 
-PositionType enum values:
-- 'World2D' : mouse position in the world coordinates using a orthographic camera
-- 'Screen' : absolute mouse position in the screen
-- 'Viewport' : mouse position relative to screen from (0,0) at botton left to (1,1) at top right
-- 'CenteredViewport' : mouse position relative to screen with (0,0) at screen center
+`PositionType` enum values:
+- `World2D` : mouse position in the world coordinates using a orthographic camera
+- `Screen` : absolute mouse position in the screen
+- `Viewport` : mouse position relative to screen from (0,0) at botton left to (1,1) at top right
+- `CenteredViewport` : mouse position relative to screen with (0,0) at screen center
 
 ## Movement components
 
@@ -193,10 +193,18 @@ PositionType enum values:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### AngularVelocity3D
 
@@ -205,10 +213,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### FollowScreenPosition2D
 
@@ -217,10 +233,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### FollowTarget2D
 
@@ -229,10 +253,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### FollowTarget3D
 
@@ -241,10 +273,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### LookToTarget2D
 
@@ -253,10 +293,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### Velocity2D
 
@@ -265,10 +313,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### Velocity3D
 
@@ -277,10 +333,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 
 ## Physics components
@@ -292,10 +356,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### RidigbodyMethods
 
@@ -304,10 +376,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### SpeedLimit2D
 
@@ -316,10 +396,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### SpeedLimit3D
 
@@ -328,10 +416,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 
 ## Collision Detection components
@@ -343,10 +439,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### CollisionDetector3D
 
@@ -355,10 +459,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 
 ## Time components
@@ -370,10 +482,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### TimedActionSequence
 
@@ -382,10 +502,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### Timer
 
@@ -394,10 +522,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 
 ## Vars components
@@ -409,10 +545,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### IntVarRef
 
@@ -421,10 +565,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### FloatVar
 
@@ -433,10 +585,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### FloatVarRef
 
@@ -445,10 +605,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### BoolVar
 
@@ -457,10 +625,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### BoolVarRef
 
@@ -469,11 +645,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
-
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ## Score components
 
@@ -484,10 +667,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### ScoreMaker
 
@@ -496,10 +687,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 
 ## Mechanics components
@@ -511,10 +710,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### Platform2D
 
@@ -523,10 +730,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### Tank2D
 
@@ -535,10 +750,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ## Audio components
 
@@ -549,10 +772,18 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 
 ### AudioManagerControl
 
@@ -561,8 +792,16 @@ Methods:
 description
 
 Fields:
-- ´´ : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
+- ` ` : 
 
 Methods:
-- void '()' :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
+- `void ()` :
 

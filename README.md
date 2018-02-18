@@ -363,82 +363,63 @@ Methods:
 
 ![Image](images/Ridigbody2DMethods.png)
 
-description
+Extra methods to control Rigidbody2D.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `float velocityX` : set x velocity
+- `float velocityY` : set y velocity
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void InvertVelocity()` : inverts rigidbody velocity (velocity = -velocity)
+- `void InvertVelocityX()` : inverts rigidbody x velocity (velocity.x = -velocity.x)
+- `void InvertVelocityY()` : inverts rigidbody y velocity (velocity.y = -velocity.y)
+- `void InvertAngularVelocity()` : inverts rigidbody angular velocity (angularVelocity = -angularVelocity)
+- `void NormalizeVelocity(float speed)` : normalizes rigidbody velocity (velocity = velocity.normalized * speed
 
 ### RidigbodyMethods
 
 ![Image](images/RidigbodyMethods.png)
 
-description
+Extra methods to control Rigidbody.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `float velocityX` : set x velocity
+- `float velocityY` : set y velocity
+- `float velocityZ` : set z velocity
+- `float angularVelocityX` : set x angular velocity
+- `float angularVelocityY` : set y angular velocity
+- `float angularVelocityZ` : set z angular velocity
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void InvertVelocity()` : inverts rigidbody velocity (velocity = -velocity)
+- `void InvertVelocityX()` : inverts rigidbody x velocity (velocity.x = -velocity.x)
+- `void InvertVelocityY()` : inverts rigidbody y velocity (velocity.y = -velocity.y)
+- `void InvertVelocityZ()` : inverts rigidbody z velocity (velocity.z = -velocity.z)
+- `void InvertAngularVelocityX()` : inverts rigidbody angular velocity x (angularVelocity.x = -angularVelocity.x)
+- `void InvertAngularVelocityY()` : inverts rigidbody angular velocity y (angularVelocity.y = -angularVelocity.y)
+- `void InvertAngularVelocityZ()` : inverts rigidbody angular velocity z (angularVelocity.z = -angularVelocity.z)
+- `void NormalizeVelocity(float speed)` : normalizes rigidbody velocity (velocity = velocity.normalized * speed
+- `void NormalizeVelocityXY(float speed)()` : normalizes rigidbody velocity xy
+- `void NormalizeVelocityXZ(float speed)()` : normalizes rigidbody velocity xz
+- `void NormalizeVelocityYZ(float speed)()` : normalizes rigidbody velocity yz
 
 ### SpeedLimit2D
 
 ![Image](images/SpeedLimit2D.png)
 
-description
+Limits the rididbody speed below a value.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `float maxSpeed` : Maximum speed allowed
 
 ### SpeedLimit3D
 
 ![Image](images/SpeedLimit3D.png)
 
-description
+Limits the rididbody speed below a value.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-
+- `float maxSpeed` : Maximum speed allowed
 
 ## Collision Detection components
 

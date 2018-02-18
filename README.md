@@ -27,8 +27,8 @@ The components> are splitted in several categories: Basics, Movement, Physics, C
   - [Velocity2D](#velocity2d)
   - [Velocity3D](#velocity3d)
 - [Physics components](#physics-components)
-  - [Ridigbody2DMethods](#ridigbody2dmethods)
-  - [RidigbodyMethods](#ridigbodymethods)
+  - [Rigidbody2DMethods](#rigidbody2dmethods)
+  - [RigidbodyMethods](#rigidbodymethods)
   - [SpeedLimit2D](#speedlimit2d)
   - [SpeedLimit3D](#speedlimit3d)
 - [Collision Detection components](#collision-detection-components)
@@ -399,9 +399,9 @@ Methods:
 
 Components to control some physics properties.
 
-### Ridigbody2DMethods
+### Rigidbody2DMethods
 
-![Image](images/Ridigbody2DMethods.png)
+![Image](images/Rigidbody2DMethods.png)
 
 Extra methods to control Rigidbody2D.
 
@@ -416,9 +416,9 @@ Methods:
 - `void InvertAngularVelocity()` : inverts rigidbody angular velocity (angularVelocity = -angularVelocity)
 - `void NormalizeVelocity(float speed)` : normalizes rigidbody velocity (velocity = velocity.normalized * speed
 
-### RidigbodyMethods
+### RigidbodyMethods
 
-![Image](images/RidigbodyMethods.png)
+![Image](images/RigidbodyMethods.png)
 
 Extra methods to control Rigidbody.
 

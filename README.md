@@ -188,63 +188,64 @@ Fields:
 
 ### AngularVelocity2D
 
-![Image](images/KeyInput.png)
+![Image](images/AngularVelocity2D.png)
 
-description
+Controls the Rigidbody2D/Transform angular velocity.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `float velocity` : 
+- `ControlType controlType` : 
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void ApplyVelocity()` : apply the velocity to the Rigidbody2D/Transform
+
+`ControlType` enum values:
+- `Continuous` : angular velocity is continuous set
+- `OnStart` : angular velocity is set on `Start` event
+- `OnEnable` : angular velocity is set on `OnEnable` event
+- `Manual` : angular velocity is set when the method `ApplyVelocity()` is called
 
 ### AngularVelocity3D
 
-![Image](images/KeyInput.png)
+![Image](images/AngularVelocity3D.png)
 
-description
+Controls the Rigidbody3D/Transform angular velocity.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `Vector3 angularVelocity` : Current angular velocity
+- `float angularVelocityX` : Current x angular velocity
+- `float angularVelocityY` : Current y angular velocity
+- `float angularVelocityZ` : Current z angular velocity
+- `ControlType controlType` : How the angular velocity is controled
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void ApplyVelocity()` : apply the velocity to the Rigidbody3D/Transform
+
+`ControlType` enum values:
+- `Continuous` : angular velocity is continuous set
+- `OnStart` : angular velocity is set on `Start` event
+- `OnEnable` : angular velocity is set on `OnEnable` event
+- `Manual` : angular velocity is set when the method `ApplyVelocity()` is called
 
 ### FollowScreenPosition2D
 
 ![Image](images/KeyInput.png)
 
-description
+Follows a position relative to screen.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `ControlType controlType` : How the position is controled
+- `Vector2 viewportAnchor` : Screen viewport anchor (from 0.0 to 1.0)
+- `Vector2 offset` : Position offset in world coordinates
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void ApplyPosition()` : apply the position relative to screen 
+
+`ControlType` enum values:
+- `Continous` : Apply position every frame
+- `OnStart` : Apply position on `Start` event
+- `OnEnable` : Apply position on `OnEnable` event
+- `Manual` : Apply position when the method `ApplyPosition()` is called
 
 ### FollowTarget2D
 

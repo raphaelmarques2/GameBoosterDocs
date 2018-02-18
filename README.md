@@ -18,7 +18,43 @@ The components> are splitted in several categories: Basics, Movement, Physics, C
   - [KeyInput](#keyinput)
   - [MousePositionInput](#mousepositioninput)
 - [Movement components](#movement-components)
-
+  - [AngularVelocity2D](#angularvelocity2d)
+  - [AngularVelocity3D](#angularvelocity3d)
+  - [FollowScreenPosition2D](#followscreenposition2d)
+  - [FollowTarget2D](#followtarget2d)
+  - [FollowTarget3D](#followtarget3d)
+  - [LookToTarget2D](#lookTotarget2d)
+  - [Velocity2D](#velocity2d)
+  - [Velocity3D](#velocity3d)
+- [Physics components](#physics-components)
+  - [Ridigbody2DMethods](#ridigbody2dmethods)
+  - [RidigbodyMethods](#ridigbodymethods)
+  - [SpeedLimit2D](#speedlimit2d)
+  - [SpeedLimit3D](#speedlimit3d)
+- [Collision Detection components](#collision-detection-components)
+  - [CollisionDetector2D](#collisiondetector2d)
+  - [CollisionDetector3D](#collisiondetector3d)
+- [Time components](#time-components)
+  - [TimedActions](#timedactions)
+  - [TimedActionSequence](#timedactionsequence)
+  - [Timer](#timer)
+- [Vars components](#vars-components)
+  - [IntVar](#intvar)
+  - [IntVarRef](#intvarref)
+  - [FloatVar](#floatvar)
+  - [FloatVarRef](#floatvarref)
+  - [BoolVar](#boolvar)
+  - [BoolVarRef](#boolvarref)
+- [Score components](#score-components)
+  - [Score](#score)
+  - [ScoreMaker](#scoremaker)
+- [Mechanics components](#mechanics-components)
+  - [MoveFourDirections2D](#movefourdirections2d)
+  - [Platform2D](#platform2d)
+  - [Tank2D](#tank2d)
+- [Audio components](#audio-components)
+  - [AudioManager](#audiomanager)
+  - [AudioManagerControl](#audiomanagercontrol)
 
 ## Basics components
 
@@ -185,6 +221,8 @@ Fields:
 - `CenteredViewport` : mouse position relative to screen with (0,0) at screen center
 
 ## Movement components
+
+Components to control object's movement.
 
 ### AngularVelocity2D
 
@@ -359,6 +397,8 @@ Methods:
 
 ## Physics components
 
+Components to control some physics properties.
+
 ### Ridigbody2DMethods
 
 ![Image](images/Ridigbody2DMethods.png)
@@ -469,6 +509,8 @@ Fields:
 
 ## Time components
 
+Components to deal with actions over time.
+
 ### TimedActions
 
 ![Image](images/TimedActions.png)
@@ -529,6 +571,8 @@ Methods:
 - `void SwitchPause()` : Swith between Paused and Resumed clock
 
 ## Vars components
+
+Components to store variables inside components.
 
 ### IntVar
 
@@ -742,6 +786,8 @@ Methods:
 
 ## Score components
 
+Components to score and change player's score and record.
+
 ### Score
 
 ![Image](images/Score.png)
@@ -784,105 +830,87 @@ Methods:
 
 ## Mechanics components
 
+Some simple mechanics.
+
 ### MoveFourDirections2D
 
 ![Image](images/MoveFourDirections2D.png)
 
-description
+Controls an 2D object in all directions.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `string horizontalAxis` : Horizontal axis name
+- `string verticalAxis` : Vertical axis name
+- `float speed` : Normalized speed
 
 ### Platform2D
 
 ![Image](images/Platform2D.png)
 
-description
+Simple Platform character physics control.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `float walkInput` : Controls walk direction (-1 to walk left, 0 to stop, +1 to walk right)
+- `float walkSpeed` : Speed the character walks
+- `float jumpSpeed` : Speed set to y axis when character jumps
+- `GroundCheckConfig groundCheckConfig` : Ground check options
+  - `LayerMask platformLayers` : Physics Layers to check if character is toutching ground
+  - `float width` : raycast width
+  - `float height` : raycast height
+  - `int rays` : Number of raycasts
+- `PlatformEvents events` : events related to platform character
+  - `UnityEvent onJump` : Event called when the character jumps
+  - `UnityEvent onLand` : Event called when the character fall on ground
+  - `UnityEvent onMoving` : Event called when the character starts move
+  - `UnityEvent onStop` : Event called when the character stops move
+  - `UnityEvent onAir` : Event called when the character go on air without jumping (like falling from a platform)
+- `bool defaultInput` : Use default input (keyboard arrows)
+  - `string horizontalAxis` : Horizontal axis name
+  - `KeyCode jumpKey` : Jump key
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Jump()` : jump if character is on ground
 
 ### Tank2D
 
 ![Image](images/Tank2D.png)
 
-description
+Simple Tank physics control (walk forward and rotate).
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `float turnInput` : Controls Tank turn direction (-1 to turn left, 0 to stop, +1 to turn right)
+- `float moveInput` : Controls Tank move direction (-1 to move backward, 0 to stop, +1 to move forward)
+- `float moveSpeed` : speed of Tank movement
+- `float turnSpeed` : speed of Tank rotation (in degrees/second)
+- `bool onlyTurnIfMoving` : If the Tank can only turn if its moving
+- `bool defaultInput` : If use default input
+  - `string horizontalAxis` : Horizontal (turn) axis name
+  - `string verticalAxis` : Vertical (move) axis name
 
 ## Audio components
+
+Some components do control audio in the scene.
 
 ### AudioManager
 
 ![Image](images/AudioManager.png)
 
-description
+Manager for many AudioSources. Each AudioSource must be attached to a different ´GameObject´ with the right name set.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `List<AudioSource> audios` : List of AudioSources managed by this object.
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void PlayAudio(string name)` : Play some audiosource with the name passed as parameter
+- `void StopAudio(string name)` : Stop some audiosource with the name passed as parameter
 
 ### AudioManagerControl
 
 ![Image](images/AudioManagerControl.png)
 
-description
-
-Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+Commands the [AudioManager](#audiomanager) component. This component is useful to control the AudioManager from inside a prefab.
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void PlayAudio(string name)` : Play some audiosource in the `AudioManager` with the name passed as parameter
+- `void StopAudio(string name)` : Stop some audiosource in the `AudioManager` with the name passed as parameter
 

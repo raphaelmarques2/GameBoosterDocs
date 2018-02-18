@@ -23,7 +23,7 @@ The components> are splitted in several categories: Basics, Movement, Physics, C
   - [FollowScreenPosition2D](#followscreenposition2d)
   - [FollowTarget2D](#followtarget2d)
   - [FollowTarget3D](#followtarget3d)
-  - [LookToTarget2D](#lookTotarget2d)
+  - [LookToTarget2D](#looktotarget2d)
   - [Velocity2D](#velocity2d)
   - [Velocity3D](#velocity3d)
 - [Physics components](#physics-components)

@@ -61,19 +61,66 @@ Methods:
 
 ![Image](images/ObjectSelector.png)
 
-Selects one object of a list, activating it, and deactivating the others of the list. Can be used to switch between weapons, costumes, screens, etc. There are methods to select one of the objects and to advance to next or previous object in the list.
+Selects one object of a list, activating it, and deactivating the others of the list. Can be used to switch between weapons, costumes, screens, etc.
+
+Fields:
+- GameObject **startSelected** : Selected object at start
+- bool **autoSelectOnEnable** : Select the 'startSelected' object on OnEnable event occours
+- List<GameObject> **objects** : Selectable objects
+
+Methods:
+- void **SelectFirst()** : selects the first object of the list
+- void **SelectNext()** : selects the next object of the list, after the current selected
+- void **SelectPrevious()** : selects the previous object of the list, before the current selected
+- void **SelectNone()** : deselects all objects (deactivating all)
+- void **Select(GameObject obj)** : selects the object passed as parameter
+- void **Select(string name)** : selects the object of the list with the name passed as parameter
+- void **Select(int index)** : selects the object of the list at the position passed as parameter
 
 ### SceneMethods
 
 ![Image](images/SceneMethods.png)
 
-Gives access to static methods relative to the scene, like load another scene, or reload the current one, quit application, and control timeScale to pause the game. This component don’t add features, just gives access point to static methods and properties to be called via events by other components.
+Gives access to static methods relative to the scene. This component don’t add features, just gives access point to static methods and properties to be called via events by other components.
+
+Methods:
+- void **LoadScene(string sceneName)** : load another scene
+- void **ReloadCurrentScene()** : reload current scene
+- void **ApplicationQuit()** : quit application
+- void **Pause()** : set Time.timeScale = 0
+- void **Resume()** : set Time.timeScale = 1
 
 ### TransformMethods
 
 ![Image](images/TransformMethods.png)
 
-Allows set individual axis of its transform position, scale and angle. Can, also, copy transform properties from another transform.
+Methods and properties to set only one axis of position/scale/rotation and copy position/scale/rotation from other transform.
+
+Properties:
+- float **positionX** : set position.x value
+- float **positionY** : set position.y value
+- float **positionZ** : set position.z value
+- float **localPositionX** : set localPosition.x value
+- float **localPositionY** : set localPosition.y value
+- float **localPositionZ** : set localPosition.z value
+- Vector2 **positionXY** : set position.x and position.y values
+- Vector2 **localPositionXY** : set localPosition.x and localPosition.y values
+- float **localScaleX** : set localScale.x value
+- float **localScaleY** : set localScale.y value
+- float **localScaleZ** : set localScale.z value
+- float **eulerAnglesX** : set eulerAngles.x value
+- float **eulerAnglesY** : set eulerAngles.y value
+- float **eulerAnglesZ** : set eulerAngles.z value
+- float **localEulerAnglesX** : set localEulerAngles.x value
+- float **localEulerAnglesY** : set localEulerAngles.y value
+- float **localEulerAnglesZ** : set localEulerAngles.z value
+
+Methods:
+- void **SetPositionFrom(Transform target)** : copy position from target transform
+- void **SetLocalPositionFrom(Transform target)** : copy localPosition from target transform
+- void **SetRotationFrom(Transform target)** : copy rotation from target transform
+- void **SetLocalRotationFrom(Transform target)** : copy localRotation from target transform
+- void **SetLocalScaleFrom(Transform target)** : copy localScale from target transform
 
 ## Input components
 

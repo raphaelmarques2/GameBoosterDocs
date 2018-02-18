@@ -473,62 +473,60 @@ Fields:
 
 ![Image](images/TimedActions.png)
 
-description
+Executes actions repeatedly over time.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `float startTime` : Time to wait before the first execution starts
+- `float repeatTime` : Time between two executions
+- `UnityEvent actions` : Events called
 
 ### TimedActionSequence
 
 ![Image](images/TimedActionSequence.png)
 
-description
+Executes a sequence of actions with time between them.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `TimedAction[] actions` : Actions to be executed
+  - `TimedAction` :
+    - `float waitTime` : Time to wait before execute
+    - `UnityEvent actions` : Actions to execute
+- `ControlType controlType` : How actions are executed
+- `bool continuous` : Continuous execute actions
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void CallActions()` : Start execute actions
+
+`ControlType` enum values:
+- `OnStart` : Executes when `Start` event occurs
+- `OnEnable` : Executes when `OnEnable` event occurs
+- `Manual` : Executes when method `CallActions` is called
 
 ### Timer
 
 ![Image](images/Timer.png)
 
-description
+A timer (clock).
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `float currentTime` : Current time (seconds)
+- `float startTime` : Initial time
+- `bool countdown` : If the timer is countdown
+- `float minValue` : Minimum timer value
+- `float maxvalue` : Maximum timer value
+- `bool paused` : If the timer is paused
+- `TimerEvents events` : Timer events
+  - `UnityEvent<float> onChange` : Event called when the timer value changes
+  - `UnityEvent<float> onMinValue` : Event called when the timer reaches the min value
+  - `UnityEvent<float> onMaxValue` : Event called when the timer reaches the max value
+  - `int textDigits` : Digits to show at the OnChangeText event
+  - `UnityEvent<string> onChangeText` : Event called when the timer value changes, passing a string as parameter
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-
+- `void AddTime(float time)` : Adds some time to currentTime
+- `void Pause()` : Pause the clock
+- `void Resume()` : Resume the clock
+- `void SwitchPause()` : Swith between Paused and Resumed clock
 
 ## Vars components
 

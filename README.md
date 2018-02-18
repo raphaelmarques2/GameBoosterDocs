@@ -4,7 +4,7 @@
 
 The main principle of **Game Booster** is reusability. To achieve this, each component do simple things, and can be connected with others components (even your scripts) to achieve more complex behaviours. Many scripts has UnityEvent fields, which allows you to connect some event with other object’s methods and attributes on your scene.
 
-The components are splitted in several categories: Basics, Movement, Physics, Collision Detection, Input, Time, Vars, Score, Mechanics and Audio.
+The components> are splitted in several categories: Basics, Movement, Physics, Collision Detection, Input, Time, Vars, Score, Mechanics and Audio.
 
 ## Basics components
 
@@ -28,6 +28,8 @@ Creates instance of prefabs. Randomically choose one prefab from the list to be 
 
 Fields:
 - `List<GameObject> prefabs` : Prefabs to be instantiated (random choosen).
+- List\<GameObject\> **prefabs** : Prefabs to be instantiated (random choosen).
+- **List\<GameObject\> prefabs** : Prefabs to be instantiated (random choosen).
 - `bool useRotation` : Use spawn point rotation as rotation of the instantiated object
 - `bool insideHierarchy` : Place the instantiated object inside other object's hierarchy
   - `Transform parent` : Object to put the instantiated objects

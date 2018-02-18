@@ -565,7 +565,7 @@ Methods:
 
 ### IntVarRef
 
-![Image](images/KeyInput.png)
+![Image](images/IntVarRef.png)
 
 Reference to a [IntVar](#intvar) component.
 
@@ -595,85 +595,150 @@ Methods:
 - `Children` : Find the `IntVar` in this object's children
 - `Parent` : Find the `IntVar` in this object's parents
 
+`GlobalVarComparisonType` enum values:
+- `Equals` : if the variable value is equals to the `comparisonValue`
+- `NotEquals` : if the variable value is not equals to the `comparisonValue`
+- `LessThan` : if the variable value is less than the `comparisonValue`
+- `LessOrEqualTo` : if the variable value is less or equal to the `comparisonValue`
+- `GreaterThan` : if the variable value is greater than the `comparisonValue`
+- `GreaterOrEqualTo` : if the variable value is greater or equal to the `comparisonValue`
+
 ### FloatVar
 
-![Image](images/KeyInput.png)
+![Image](images/FloatVar.png)
 
-description
+Stores a global float variable.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string id` : variable identifier
+- `float value` : current value
+- `float startValue` : start variable value
+- `FilterType filter` : Filter to apply when value changes
+- `bool limitValue` : limit variable value
+  - `float minValue` : min value allowed
+  - `float maxValue` : max value allowed
+- `bool storeOnPlayerPrefs` : store this variable in PlayerPrefs
+  - `string playerPrefsKey` : PlayerPrefs key
+  - `bool autoLoadOnStart` : auto load variable from PlayerPrefs
+  - `bool autoSave` : auto save variable in PlayerPrefs
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Add(float inc)` : Adds this variable to some value (value += inc)
+- `void Multiply(float multiplier)` : Multiply this variable by some value (value *= multiplier)
+- `void Divide(float divider)` : Divide this variable by some value (value /= divider)
+- `void SetValue(float value)` : Change this variable value
+- `void ResetValue()` : Reset value to `startValue`
+- `void SaveOnPlayerPrefs()` : Save on PlayerPrefs
+- `void LoadFromPlayerPrefs()` : Load from PlayerPrefs
+
+`FilterType` enum values:
+- `None` : No filter
+- `KeepMinValue` : Keep minimum value when value changes
+- `KeepMaxValue` : keep maximum value when value changes
 
 ### FloatVarRef
 
-![Image](images/KeyInput.png)
+![Image](images/FloatVarRef.png)
 
-description
+Reference to a [FloatVar](#floatvar) component.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string varId` : Referenced `FloatVar` identifier
+- `GlobalVariablePlace varPlace` : Referenced `FloatVar` search place
+- `GlobalVarGetEvents<float> getValue` : Ways to get referenced `FloatVar` value
+  - `bool condition` : submit the `getValue` to some condition
+    - `bool ignoreConditionOnStart` : ignore this condition on first value get
+    - `GlobalVarComparisonType comparison` : condition comparison
+    - `float comparisonValue` : condition comparison value
+  - `UnityEvent<float> onValueChange` : event called when the value changes
+  - `UnityEvent<string> onValueChangeText` : event called when the value changes passing its conversion to string
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Add(float inc)` : Adds the referenced variable to some value (value += inc)
+- `void Multiply(float multiplier)` : Multiply the referenced variable by some value (value *= multiplier)
+- `void Divide(float divider)` : Divide the referenced variable by some value (value /= divider)
+- `void SetValue(float value)` : Change the referenced variable value
+- `void ResetValue()` : Reset the referenced variable value to `startValue`
+- `void SaveOnPlayerPrefs()` : Save the referenced variable on PlayerPrefs
+- `void LoadFromPlayerPrefs()` : Load the referenced variable from PlayerPrefs
+
+`GlobalVariablePlace` enum values:
+- `Anywhere` : Find the `FloatVar` anywhere in the scene
+- `Self` : Find the `FloatVar` in its own `GameObject`
+- `Children` : Find the `FloatVar` in this object's children
+- `Parent` : Find the `FloatVar` in this object's parents
+
+`GlobalVarComparisonType` enum values:
+- `Equals` : if the variable value is equals to the `comparisonValue`
+- `NotEquals` : if the variable value is not equals to the `comparisonValue`
+- `LessThan` : if the variable value is less than the `comparisonValue`
+- `LessOrEqualTo` : if the variable value is less or equal to the `comparisonValue`
+- `GreaterThan` : if the variable value is greater than the `comparisonValue`
+- `GreaterOrEqualTo` : if the variable value is greater or equal to the `comparisonValue`
 
 ### BoolVar
 
-![Image](images/KeyInput.png)
+![Image](images/BoolVar.png)
 
-description
+Stores a global bool variable.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string id` : variable identifier
+- `bool value` : current value
+- `bool startValue` : start variable value
+- `bool storeOnPlayerPrefs` : store this variable in PlayerPrefs (as an int 0 or 1)
+  - `string playerPrefsKey` : PlayerPrefs key
+  - `bool autoLoadOnStart` : auto load variable from PlayerPrefs
+  - `bool autoSave` : auto save variable in PlayerPrefs
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Or(bool value)` : Applies an 'or' operator with some value (varValue = varValue || value)
+- `void And(bool value)` : Applies an 'and' operator with some value (varValue = varValue && value)
+- `void Neg()` : Inverts the value (varValue = !varValue)
+- `void SetValue(int value)` : Change this variable value
+- `void ResetValue()` : Reset value to `startValue`
+- `void SaveOnPlayerPrefs()` : Save on PlayerPrefs
+- `void LoadFromPlayerPrefs()` : Load from PlayerPrefs
 
 ### BoolVarRef
 
-![Image](images/KeyInput.png)
+![Image](images/BoolVarRef.png)
 
-description
+Reference to a [BoolVar](#boolvar) component.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `string varId` : Referenced `BoolVar` identifier
+- `GlobalVariablePlace varPlace` : Referenced `BoolVar` search place
+- `GlobalVarGetEvents<bool> getValue` : Ways to get referenced `BoolVar` value
+  - `bool condition` : submit the `getValue` to some condition
+    - `bool ignoreConditionOnStart` : ignore this condition on first value get
+    - `GlobalVarComparisonType comparison` : condition comparison
+    - `int comparisonValue` : condition comparison value
+  - `UnityEvent<int> onValueChange` : event called when the value changes
+  - `UnityEvent<string> onValueChangeText` : event called when the value changes passing its conversion to string
 
 Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+- `void Or(bool value)` : Applies an 'or' operator with some value (varValue = varValue || value)
+- `void And(bool value)` : Applies an 'and' operator with some value (varValue = varValue && value)
+- `void Neg()` : Inverts the value (varValue = !varValue)
+- `void SetValue(int value)` : Change this referenced variable value
+- `void ResetValue()` : Reset the referenced variable value to `startValue`
+- `void SaveOnPlayerPrefs()` : Save the referenced variable on PlayerPrefs
+- `void LoadFromPlayerPrefs()` : Load the referenced variable from PlayerPrefs
+
+`GlobalVariablePlace` enum values:
+- `Anywhere` : Find the `BoolVar` anywhere in the scene
+- `Self` : Find the `BoolVar` in its own `GameObject`
+- `Children` : Find the `BoolVar` in this object's children
+- `Parent` : Find the `BoolVar` in this object's parents
+
+`GlobalVarComparisonType` enum values:
+- `Equals` : if the variable value is equals to the `comparisonValue`
+- `NotEquals` : if the variable value is not equals to the `comparisonValue`
+- `LessThan` : if the variable value is less than the `comparisonValue`
+- `LessOrEqualTo` : if the variable value is less or equal to the `comparisonValue`
+- `GreaterThan` : if the variable value is greater than the `comparisonValue`
+- `GreaterOrEqualTo` : if the variable value is greater or equal to the `comparisonValue`
 
 ## Score components
 

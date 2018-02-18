@@ -71,6 +71,23 @@ Methods:
 - **void DestroyThisWithoutExplosion()** : destroy this object ignoring explosion
 - **void JustDestroyThis()** : destroy this object ignoring all options
 
+### DestroyerX
+
+![Image](images/Destroyer.png)
+
+This component has a few ways to destroy the object it is attached to.
+
+Fields:
+- `float selfDestructionTime` : Time to self destruction. Set 0(zero) to disable.
+- `float timeToDestroy` : Time to destroy when 'DestroyThis' method is called
+- `GameObject explosionPrefab` : Prefab to replace the destroyed object
+
+Methods:
+- `void DestroyThis()` : destroy this object including all options set
+- `void DestroyThisNow()` : destroy this object ignoring timeToDestroy option
+- `void DestroyThisWithoutExplosion()` : destroy this object ignoring explosion
+- `void JustDestroyThis()` : destroy this object ignoring all options
+
 ### ObjectSelector
 
 ![Image](images/ObjectSelector.png)

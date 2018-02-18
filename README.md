@@ -427,42 +427,45 @@ Fields:
 
 ![Image](images/CollisionDetector2D.png)
 
-description
+Detects 2D collisions.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `CollisionEvent collisionEvent` : Collision event
+- `CollisionType collisionType` : Collider type
+- `string tags` : Tags to filter collision. Use ';' to separate more tags.
+- `UnityEvent<GameObject> actions` : Event called when a collision occurs
 
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+`CollisionEvent` enum values:
+- `Enter` : When this rigidbody/collider has begun touching another rigidbody/collider
+- `Exit` : When this rigidbody/collider has stopped touching another rigidbody/collider
+- `Stay` : Once per frame for every collider/rigidbody that is touching rigidbody/collider
+
+`CollisionType` enum values:
+- `Any` : Collision and Trigger events
+- `Collision` : Only collision events (non trigger)
+- `Trigger` : Only trigger events
 
 ### CollisionDetector3D
 
 ![Image](images/CollisionDetector3D.png)
 
-description
+Detects 3D collisions.
 
 Fields:
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
-- ` ` : 
+- `CollisionEvent collisionEvent` : Collision event
+- `CollisionType collisionType` : Collider type
+- `string tags` : Tags to filter collision. Use ';' to separate more tags.
+- `UnityEvent<GameObject> actions` : Event called when a collision occurs
 
-Methods:
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
-- `void ()` :
+`CollisionEvent` enum values:
+- `Enter` : When this rigidbody/collider has begun touching another rigidbody/collider
+- `Exit` : When this rigidbody/collider has stopped touching another rigidbody/collider
+- `Stay` : Once per frame for every collider/rigidbody that is touching rigidbody/collider
 
+`CollisionType` enum values:
+- `Any` : Collision and Trigger events
+- `Collision` : Only collision events (non trigger)
+- `Trigger` : Only trigger events
 
 ## Time components
 

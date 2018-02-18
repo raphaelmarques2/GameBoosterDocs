@@ -141,60 +141,428 @@ Methods:
 Components to get player's input.
 
 ### AxisInput
+
+![Image](images/AxisInput.png)
+
+Gets axis input value.
+
+Fields:
+- ´string axisName´ : Axis name (ex: "Horizontal", "Vertical" )
+- ´bool raw´ : Get input raw value
+- ´float multiplier´ : Axis will be multiplied by this value
+- ´UnityEvent<float> actions´ : event called at each frame passing axis value
+
 ### KeyInput
+
+![Image](images/KeyInput.png)
+
+Gets key input events.
+
+Fields:
+- ´EventType eventType´ : Type of key event
+- ´KeyCode key´ : Key code
+- ´UnityEvent<bool> actions´ : event called when the key event happens
+
+EventType enum values:
+- Pressed : event is called when the key is pressed
+- Released : event is called when the key is released
+- Repeat : event is called each update
+
 ### MousePositionInput
+
+![Image](images/MousePositionInput.png)
+
+Gets mouse position.
+
+Fields:
+- ´PositionType positionType´ : Mouse position coordinate.
+- ´UnityEvent<Vector2> actions´ : events called each update passing the mouse position
+
+PositionType enum values:
+- 'World2D' : mouse position in the world coordinates using a orthographic camera
+- 'Screen' : absolute mouse position in the screen
+- 'Viewport' : mouse position relative to screen from (0,0) at botton left to (1,1) at top right
+- 'CenteredViewport' : mouse position relative to screen with (0,0) at screen center
 
 ## Movement components
 
 ### AngularVelocity2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### AngularVelocity3D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### FollowScreenPosition2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### FollowTarget2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### FollowTarget3D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### LookToTarget2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### Velocity2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### Velocity3D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 
 ## Physics components
 
 ### Ridigbody2DMethods
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### RidigbodyMethods
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### SpeedLimit2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### SpeedLimit3D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 
 ## Collision Detection components
 
 ### CollisionDetector2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### CollisionDetector3D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 
 ## Time components
 
 ### TimedActions
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### TimedActionSequence
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### Timer
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 
 ## Vars components
 
 ### IntVar
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### IntVarRef
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### FloatVar
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### FloatVarRef
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### BoolVar
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### BoolVarRef
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 
 ## Score components
 
 ### Score
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### ScoreMaker
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 
 ## Mechanics components
 
 ### MoveFourDirections2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### Platform2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### Tank2D
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
 
 ## Audio components
 
 ### AudioManager
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
+
 ### AudioManagerControl
+
+![Image](images/KeyInput.png)
+
+description
+
+Fields:
+- ´´ : 
+
+Methods:
+- void '()' :
 

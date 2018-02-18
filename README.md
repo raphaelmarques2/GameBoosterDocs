@@ -6,6 +6,11 @@ The main principle of **Game Booster** is reusability. To achieve this, each com
 
 The components> are splitted in several categories: Basics, Movement, Physics, Collision Detection, Input, Time, Vars, Score, Mechanics and Audio.
 
+- [Basics components](#basics-components)
+  - [BehaviourEvents](#behaviourevents)
+  - [Creator](#creator)
+  - [Destroyer](#destroyer)
+
 ## Basics components
 
 Basics components deal with fundamental logic in Game Booster

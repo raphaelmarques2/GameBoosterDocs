@@ -14,9 +14,27 @@ Basics components deal with fundamental logic in Game Booster
 
 Creates events for each MonoBehaviour events like Awake, Start, Update, OnEnable, etc. This component helps you to put simple logic in some MonoBehaviour event without creating a new script to it.
 
+Fields:
+- Enum eventType : Enum of each event will be received
+- UnityEvent actions : Events that will be called when the event set in EventType happens
+
 ### Creator
 
-Creates instance of prefabs. Randomically choose one prefab from the list to be instantiated at some spawn point. The own creator object can be used as spawn point, or a list of transforms. The spawn point rotation can be applied to the instantiated object. The created objects can be put inside some object hierarchy, to keep your scene organized. There are also options to make de creator auto instantiate object over time.
+Creates instance of prefabs. Randomically choose one prefab from the list to be instantiated at some spawn point.
+
+Fields:
+- List<GameObject> **prefabs** : Prefabs to be instantiated (random choosen).
+- bool **useRotation** : Use spawn point rotation as rotation of the instantiated object
+- bool **insideHierarchy** : Place the instantiated object inside other object's hierarchy
+  - Transform **parent** : Object to put the instantiated objects
+- bool **useSpawnPoints** : Use other spawn points instead of this object
+  - List<Transform> **spawnPoints**: Spawn points where the prefab will be instantiated (random choosen)
+- bool **autoCreate** : Automatically instantiate
+  - float **startTime** : Time to start prefab instantiation
+  - float **repeatTime** : Time between instantiations
+
+Methods:
+- void **Create()** : Instantiate a prefab using the options set
 
 ### Destroyer
 
@@ -34,10 +52,21 @@ Gives access to static methods relative to the scene, like load another scene, o
 
 Allows set individual axis of its transform position, scale and angle. Can, also, copy transform properties from another transform.
 
+## Input components
+
+Components to get player's input.
+
+### AxisInput
+
+### KeyInput
+### MousePositionInput
+
 ## Movement components
+
+
+
 ## Physics components
 ## Collision Detection components
-## Input components
 ## Time components
 ## Vars components
 ## Score components

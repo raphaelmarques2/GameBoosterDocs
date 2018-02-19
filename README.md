@@ -1,11 +1,16 @@
 ## Welcome to Game Booster Docs
 
-**Game Booster** is a set of scripts to create your game. It has a lot of daily common logic to accelerate your development. There is components to deal with movement, instantiation, destruction, input, score, and lot more.
+**Game Booster** is a set of scripts to help you create your game in Unity. It has a lot of daily common logic to accelerate your development. There is components to deal with movement, instantiation, destruction, input, score, and lot more.
 
-The main principle of **Game Booster** is reusability. To achieve this, each component do simple things, and can be connected with others components (even your scripts) to achieve more complex behaviours. Many scripts has UnityEvent fields, which allows you to connect some event with other object’s methods and attributes on your scene.
+The main principle of **Game Booster** is reusability. To achieve this, each component do simple things, and can be connected with others components, including your own scripts, to achieve more complex behaviours. Many scripts has UnityEvent fields, which allows you to connect some event with other object in your scene.
+
+**Game Booster** is made mainly to programmers, to reduce the amount of repetitive code created. So, it's a good practice to create  scripts that controls, or are controled by, other Game Booster's components.
 
 The components> are splitted in several categories: Basics, Movement, Physics, Collision Detection, Input, Time, Vars, Score, Mechanics and Audio.
 
+Developer contact: [raphaelmarquesapps@gmail.com](mailto:raphaelmarquesapps@gmail.com)
+
+#### Component list:
 - [Basics components](#basics-components)
   - [BehaviourEvents](#behaviourevents)
   - [Creator](#creator)

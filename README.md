@@ -6,7 +6,7 @@ The main principle of **Game Booster** is reusability. To achieve this, each com
 
 **Game Booster** is made mainly to programmers, to reduce the amount of repetitive code created. So, it's a good practice to create  scripts that controls, or are controled by, other Game Booster's components.
 
-The components> are splitted in several categories: Basics, Movement, Physics, Collision Detection, Input, Time, Vars, Score, Mechanics and Audio.
+The components are splitted in several categories: Basics, Movement, Physics, Collision Detection, Input, Time, Vars, Score, Mechanics and Audio.
 
 Developer contact: [raphaelmarquesapps@gmail.com](mailto:raphaelmarquesapps@gmail.com)
 
